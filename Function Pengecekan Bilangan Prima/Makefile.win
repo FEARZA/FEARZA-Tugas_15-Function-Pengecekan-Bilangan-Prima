@@ -1,0 +1,28 @@
+# Project: Function Pengecekan Bilangan Prima
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = "Function\ Pengecekan\ Bilangan\ Prima.o"
+LINKOBJ  = "Function Pengecekan Bilangan Prima.o"
+LIBS     = -L"E:/Aplikasi Semester 2/Dev-Cpp/MinGW64/lib" -L"E:/Aplikasi Semester 2/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"E:/Aplikasi Semester 2/Dev-Cpp/MinGW64/include" -I"E:/Aplikasi Semester 2/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Aplikasi Semester 2/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"E:/Aplikasi Semester 2/Dev-Cpp/MinGW64/include" -I"E:/Aplikasi Semester 2/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Aplikasi Semester 2/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Aplikasi Semester 2/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Function Pengecekan Bilangan Prima.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+"Function\ Pengecekan\ Bilangan\ Prima.o": Function\ Pengecekan\ Bilangan\ Prima.cpp
+	$(CPP) -c "Function Pengecekan Bilangan Prima.cpp" -o "Function Pengecekan Bilangan Prima.o" $(CXXFLAGS)
